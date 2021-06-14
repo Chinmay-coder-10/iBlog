@@ -2,6 +2,12 @@ body {
   background-color: #eaaaaa52;
   overflow: auto;
 }
+
+.text{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
 #text {
   border: 2px solid red;
   color: black;
