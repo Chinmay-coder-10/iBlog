@@ -3,7 +3,7 @@ body {
   overflow: auto;
 }
 
-.text{
+.checktext{
   display: flex;
   align-items:center;
   justify-content: center;
@@ -61,11 +61,11 @@ body {
     top: 125px;
     left: 25px;
   }
-.text{
+.checktext{
 display: flex;
 align-items:center;
 justify-content:center;
 color: red;
 }
-}
+
 
