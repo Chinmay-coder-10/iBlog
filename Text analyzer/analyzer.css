@@ -61,4 +61,11 @@ body {
     top: 125px;
     left: 25px;
   }
+.text{
+display: flex;
+align-items:center;
+justify-content:center;
+
 }
+}
+
