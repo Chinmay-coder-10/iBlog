@@ -63,8 +63,6 @@ body {
   }
 .checktext{
 display: flex;
-align-items:center;
-justify-content:center;
 color: red;
 flex-direction: coloumn;
 }
