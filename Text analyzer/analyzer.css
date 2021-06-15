@@ -65,6 +65,8 @@ body {
 display: flex;
 color: blue;
 flex-direction: coloumn;
+position: relative;
+left:74px;
 }
 .mainchecktext{
 width: 100px;
