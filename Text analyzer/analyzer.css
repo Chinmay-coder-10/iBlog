@@ -65,13 +65,13 @@ body {
 display: flex;
 color: blue;
 flex-direction: coloumn;
-position: relative;
-left: 14pc;
+
 
 }
 .mainchecktext{
 width: 100px;
-
+position: relative;
+left: 14pc;
 }
 
 
