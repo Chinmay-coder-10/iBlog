@@ -28,8 +28,8 @@ body {
   color: #fff;
   transition: all 0.7s ease-in-out;
   position: relative;
-  top: 400px;
-  left: 71px;
+  top: 360px;
+  left: 74px;
 }
 .generateInfobtn:hover {
   background-color: #001aff;
