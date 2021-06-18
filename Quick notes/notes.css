@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+hr{
+    color: rgb(90, 90, 241);
+}
+
+.uniquecard{
+    display: flex;
+    flex-direction: row;
+}
