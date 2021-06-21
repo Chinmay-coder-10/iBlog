@@ -15,3 +15,12 @@ hr{
     display: flex;
     flex-direction: row;
 }
+
+#gifpreloader{
+     display: none;
+   /* color: rebeccapurple; */
+}
+#preloadertext{
+    display: none;
+    color: rebeccapurple;
+}
