@@ -22,5 +22,20 @@ hr{
 }
 #preloadertext{
     display: none;
-    color: rebeccapurple;
+}
+
+.uniquenoteCard{
+    border: 2px solid rebeccapurple;
+    border-radius: 5px;
+}
+
+#addTxt{
+    border: 2px solid rgb(255, 7, 7);
+    border-radius: 10px;
+}
+
+#addTxt:focus{
+    color: #1b00ff;
+    background-color: #fff;
+    box-shadow: 0 0 0 0;
 }
