@@ -34,6 +34,16 @@ hr{
     border-radius: 10px;
 }
 
+.star-svg{
+  background: grey;
+  position: relative;
+  left: 214px;
+  top: 4px;
+}
+.star-svg path{
+  fill: white;
+}
+
 #addTxt:focus{
     color: #1b00ff;
     background-color: #fff;
