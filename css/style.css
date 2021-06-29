@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+hr{
+    width: 82%;
+}
+
+
+.blogposts{
+    margin-left: 1.5rem;
+}
+
+.headersmall{
+    font-size: revert;
+}
+
+h5{
+    font-size: 2.5rem;
+}
+
+.headerh1{
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-left: 3.5rem;
+}
+
+.anchortag{
+    color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.anchortag:hover{
+    color: #1900ff;
+    text-decoration: none;
+}
+
+small{
+    font-size: medium;
+}
+
+
