@@ -56,13 +56,14 @@ function showNotes() {
 <svg id="star" class="star-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" width="21px" height="20px">
 <path  d="M0,0.054V20h21V0.054H0z M15.422,18.129l-5.264-2.768l-5.265,2.768l1.006-5.863L1.64,8.114l5.887-0.855
 	l2.632-5.334l2.633,5.334l5.885,0.855l-4.258,4.152L15.422,18.129z"/>
-</svg>
+</svg>  
             <div class="card-body">
                         <h5 class="card-title">Note ${index + 1}</h5>
-                        <p class="card-text"> ${element}</p>
+                        <p onclick="copy();" style="user-select: all;" class="card-text"> ${element}</p>
                         <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
                     </div>
-                </div>               
+                </div>   
+                 
          `;
   });
   let notesElm = document.getElementById("notes");
@@ -124,7 +125,6 @@ function editNote(index) {
 
 function star() {
     let star = document.getElementById('star')
-    console.log(star)
     star.addEventListener('click', function() {
       star.style.background = "black";
     });
@@ -145,3 +145,14 @@ Further Features:
 <path d="M0,0.054V20h21V0.054H0z M15.422,18.129l-5.264-2.768l-5.265,2.768l1.006-5.863L1.64,8.114l5.887-0.855
 	l2.632-5.334l2.633,5.334l5.885,0.855l-4.258,4.152L15.422,18.129z"/>
 </svg> */}
+
+let copyinp = document.getElementById('notetext');
+let copybtn = document.getElementById('copybtn');
+
+function copy() {
+  document.execCommand('Copy');
+};
+
+// copybtn.addEventListener('click', function copy() {
+//   document.execCommand('Copy');
+// })
