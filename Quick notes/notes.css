@@ -3,51 +3,49 @@
   padding: 0;
 }
 
-h1{
-    text-align: center;
+footer {
+  display: none;
+  position: absolute;
+  border: 0;
+  background: repeating-linear-gradient(-3deg, black, transparent 100px);
+  bottom: 0;
 }
 
-hr{
-    color: rgb(90, 90, 241);
+h1 {
+  text-align: center;
 }
 
-.uniquecard{
-    display: flex;
-    flex-direction: row;
+hr {
+  color: rgb(90, 90, 241);
 }
 
-#gifpreloader{
-     display: none;
-   /* color: rebeccapurple; */
-}
-#preloadertext{
-    display: none;
+.uniquecard {
+  display: flex;
+  flex-direction: row;
 }
 
-.uniquenoteCard{
-    border: 2px solid rebeccapurple;
-    border-radius: 5px;
+#gifpreloader {
+  display: none;
+  /* color: rebeccapurple; */
+}
+#preloadertext {
+  display: none;
 }
 
-#addTxt{
-    border: 2px solid rgb(255, 7, 7);
-    border-radius: 10px;
+.uniquenoteCard {
+  border: 2px solid rebeccapurple;
+  border-radius: 5px;
 }
 
-.star-svg{
-  background: grey;
-  position: relative;
-  left: 214px;
-  top: 4px;
-}
-.star-svg path{
-  fill: white;
+#addTxt {
+  border: 2px solid rgb(255, 7, 7);
+  border-radius: 10px;
 }
 
-#addTxt:focus{
-    color: #1b00ff;
-    background-color: #fff;
-    box-shadow: 0 0 0 0;
+#addTxt:focus {
+  color: #1b00ff;
+  background-color: #fff;
+  box-shadow: 0 0 0 0;
 }
 
 .editbtn {
@@ -60,4 +58,18 @@ hr{
   width: 17px;
   height: 0px;
   background: transparent;
+}
+
+.star-svg {
+  background: grey;
+  position: relative;
+  left: 214px;
+  top: 4px;
+}
+.star-svg path {
+  fill: white;
+}
+
+.noteCard:hover::before{
+  content: "Single click notes text to copy";
 }
