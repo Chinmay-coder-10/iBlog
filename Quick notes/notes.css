@@ -70,6 +70,22 @@ hr {
   fill: white;
 }
 
+
+
 .noteCard:hover::before{
-  content: "Single click notes text to copy";
+  background: black;
+  border-radius: 6px;
+  color: white;
+  content: attr(aria-label);
+  letter-spacing: normal;
+  padding: .5em .75em;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  font-size: small;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: pre;
+  z-index: 1000000;
 }
