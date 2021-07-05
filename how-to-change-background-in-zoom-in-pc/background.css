@@ -27,6 +27,7 @@ main {
   margin-top: 1rem;
   font-size: 100;
   font-weight: 400;
+font-family: 'Source Sans Pro', sans-serif
 }
 
 .description {
@@ -49,6 +50,7 @@ main {
   margin-left: 4.5rem;
   font-size: 16.5pt;
   font-weight: 400;
+font-family: 'Source Sans Pro', sans-serif
 }
 
 .contextmenuimg {
