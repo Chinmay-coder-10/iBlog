@@ -1,13 +1,13 @@
-const tempinput = document.getElementById('tempinput');
-const results = document.getElementsByClassName('valuecontainer')[0];
-const cel = document.getElementsByClassName('cel')[0];
-const fah = document.getElementsByClassName('fah')[0];
-console.log(fah);
+const celsiusInput = document.getElementById('celsiusInput');
+const fahrenheitInput = document.getElementById('fahrenheitInput');
 
-tempinput.addEventListener('input', function showResults(){
-    const tempfinalvalue = tempinput.value * 9/5+32;
-    results.innerHTML = `Value is ${tempfinalvalue}`;
-});
+function celToFah() {
+    fahrenheitInput.value = celsiusInput.value*9/5+32
+};
+function fahToCel() {
+    celsiusInput.value =  fahrenheitInput.value-32*5/9
+};
+
 
 
 
