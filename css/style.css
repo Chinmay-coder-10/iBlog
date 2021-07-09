@@ -1,43 +1,73 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-hr{
-    width: 82%;
+hr {
+  width: 82%;
 }
 
-
-.blogposts{
-    margin-left: 1.5rem;
+main {
+  height: 83vh;
+}
+.blogposts {
+  margin-left: 1.5rem;
 }
 
-.headersmall{
-    font-size: revert;
+.headersmall {
+  font-size: revert;
 }
 
-h5{
-    font-size: 2.5rem;
+h5 {
+  font-size: 2.5rem;
 }
 
-.headerh1{
-    font-weight: 600;
-    font-size: 2.5rem;
-    margin-left: 3.5rem;
+/* .hr{
+  display: none;
+} */
+
+.headerh1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-left: 3.5rem;
 }
 
-.anchortag{
-    color: black;
-    transition: all 0.3 ease-in-out;
+.anchortag {
+  color: black;
+  transition: 0.25s ease-in-out;
 }
 
-.anchortag:hover{
-    color: #1900ff;
-    text-decoration: none;
+.anchortag:hover {
+  color: #1900ff;
+  text-decoration: none;
+}
+.anchortag:hover::after {
+  border-bottom: 3px solid black;
 }
 
-small{
-    font-size: medium;
+.anchortag:hover:after {
+  transform: scaleX(1);
 }
 
+.How-to-change-background-zoom{
+  width: fit-content;
+}
 
+.anchortag:after {
+  display: block;
+  content: "";
+  transform: scaleX(0);
+  transition: transform 200ms ease-in-out;
+}
+
+.readmore:hover {
+  text-decoration: underline;
+}
+
+small {
+  font-size: medium;
+}
+
+footer{
+  width: fit-content;
+}
