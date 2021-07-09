@@ -16,7 +16,9 @@ function startpre() {
 
   setTimeout(stoppre, 200);
 }
-
+let addTxt = document.getElementById("addTxt");
+let addTitle = document.getElementById("addTitle");
+console.log(addTitle);
 //Quick notes
 
 // If user adds a note, add it to the localStorage
@@ -29,9 +31,15 @@ addBtn.addEventListener("click", function (e) {
   } else {
     notesObj = JSON.parse(notes);
   }
-  notesObj.push(addTxt.value);
+let myObj = {
+  title: addTitle.value,
+  text: addTxt.value
+}
+
+  notesObj.push(myObj);
   localStorage.setItem("notes", JSON.stringify(notesObj));
   addTxt.value = "";
+  addTitle.value = "";
   //   console.log(notesObj);
   showNotes();
 });
@@ -56,13 +64,13 @@ function showNotes() {
 <svg id="star" class="star-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" width="21px" height="20px">
 <path  d="M0,0.054V20h21V0.054H0z M15.422,18.129l-5.264-2.768l-5.265,2.768l1.006-5.863L1.64,8.114l5.887-0.855
 	l2.632-5.334l2.633,5.334l5.885,0.855l-4.258,4.152L15.422,18.129z"/>
-</svg>  
-            <div class="card-body">
-                        <h5 class="card-title">Note ${index + 1}</h5>
-                        <p onclick="copy();" style="user-select: all;" class="card-text"> ${element}</p>
+</svg> 
+<div class="card-body">
+                        <h5 class="card-title">${element.title}</h5>
+                        <p onclick="copy();" style="user-select: all;" class="card-text"> ${element.text}</p>
                         <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
                     </div>
-                </div>   
+                </div>
                  
          `;
   });
@@ -108,7 +116,6 @@ function editNote(index) {
   let notes = localStorage.getItem("notes");
   let addTxtedit = document.getElementById("addTxt");
 
-
   if (notes == null) {
     notesObj = [];
   } else {
@@ -117,20 +124,20 @@ function editNote(index) {
 
   notesObj.findIndex((element, index) => {
     addTxtedit.value = element;
-  })
+  });
   notesObj.splice(index, 1);
   localStorage.setItem("notes", JSON.stringify(notesObj));
   showNotes();
 }
 
 function star() {
-    let star = document.getElementById('star')
-    star.addEventListener('click', function() {
-      star.style.background = "black";
-    });
-    star.addEventListener('dblclick', function() {
-      star.style.background = "grey";
-    })
+  let star = document.getElementById("star");
+  star.addEventListener("click", function () {
+    star.style.background = "black";
+  });
+  star.addEventListener("dblclick", function () {
+    star.style.background = "grey";
+  });
 }
 star();
 /*
@@ -141,18 +148,40 @@ Further Features:
 4. Sync and host to web server
 */
 
-{/* <svg class="star-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" width="21px" height="20px">
+{
+  /* <svg class="star-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" width="21px" height="20px">
 <path d="M0,0.054V20h21V0.054H0z M15.422,18.129l-5.264-2.768l-5.265,2.768l1.006-5.863L1.64,8.114l5.887-0.855
 	l2.632-5.334l2.633,5.334l5.885,0.855l-4.258,4.152L15.422,18.129z"/>
-</svg> */}
+</svg> */
+}
 
-let copyinp = document.getElementById('notetext');
-let copybtn = document.getElementById('copybtn');
+let copyinp = document.getElementById("notetext");
+let copybtn = document.getElementById("copybtn");
 
 function copy() {
-  document.execCommand('Copy');
-};
+  document.execCommand("Copy");
+}
+
+addTxt.addEventListener("input", function entereventchinu() {
+  document.execCommand("enter");
+  console.log("Enter");
+});
 
 // copybtn.addEventListener('click', function copy() {
 //   document.execCommand('Copy');
 // })
+
+{
+  /* <div class="card-body">
+                        <h5 class="card-title">Note ${index + 1}</h5>
+                        <p onclick="copy();" style="user-select: all;" class="card-text"> ${element}</p>
+                        <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
+                    </div>
+                </div> */
+}
+{
+  /* <svg id="star" class="star-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" width="21px" height="20px">
+<path  d="M0,0.054V20h21V0.054H0z M15.422,18.129l-5.264-2.768l-5.265,2.768l1.006-5.863L1.64,8.114l5.887-0.855
+	l2.632-5.334l2.633,5.334l5.885,0.855l-4.258,4.152L15.422,18.129z"/>
+</svg>   */
+}
