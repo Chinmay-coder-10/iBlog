@@ -33,8 +33,12 @@ hr {
 }
 
 .uniquenoteCard {
-  border: 2px solid rebeccapurple;
+  /* border: 2px solid rebeccapurple; */
   border-radius: 5px;
+  width: 18rem;
+  border-radius: 11px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 22px 3px rgb(41 40 40 / 36%);
 }
 
 #addTxt {
@@ -70,15 +74,13 @@ hr {
   fill: white;
 }
 
-
-
-.noteCard:hover::before{
+.noteCard:hover::before {
   background: black;
   border-radius: 6px;
   color: white;
   content: attr(aria-label);
   letter-spacing: normal;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   pointer-events: none;
   position: absolute;
   text-align: center;
@@ -88,4 +90,49 @@ hr {
   text-transform: none;
   white-space: pre;
   z-index: 1000000;
+}
+
+.unique-card {
+  border-radius: 15px;
+  box-shadow: 0px 20px 22px 3px rgb(41 40 40 / 36%);
+}
+
+.card {
+  width: 31.5rem;
+  box-shadow: 0px 1px 22px 3px rgb(123 123 123 / 36%);
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+.btn{
+  background: black;
+  width: 123px;
+  border-radius: 19px;
+  border-color: black;
+}
+.btn:hover{
+  background-color: black;
+}
+.btn-primary:hover {
+  color: #fff;
+  border-color: black;
+}
+#addTitle{
+      border: 2px solid red;
+    border-radius: 8px;
+    box-shadow: 4px 1px 27px 9px rgb(233 233 249);
+}
+#addTxt{
+ box-shadow:  4px 1px 27px 9px rgb(233 233 249);
+}
+.card-title{
+  padding: 6px;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 23.5rem;
+  }
 }
