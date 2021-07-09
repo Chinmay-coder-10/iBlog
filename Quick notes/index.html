@@ -38,6 +38,9 @@
             <li class="nav-item">
               <a class="nav-link active" href="./index.html" tabindex="-1" aria-disabled="true">Quick notes</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Tools/" tabindex="-1" aria-disabled="true">Tools</a>
+            </li>
           </ul>
           <form class="d-flex">
             <input aria-haspopup="false" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus=""
@@ -53,14 +56,15 @@
       <h1>Welcome to Quick notes</h1>
       <div class="card my-3">
         <div id="notecardcopy" class="card-body">
-          <h5 class="card-title">Add a note</h5>
+          <h5 class="card-title">Add note title</h5>
+          <input type="text" class="form-control" id="addTitle" placeholder="Add note title here">
+          <h5 class="card-title">Add note text</h5>
           <div class="textarea">
             <textarea spellcheck="false" class="form-control" id="addTxt" rows="3">
           </textarea>
             <img id="gifpreloader" src="../Spinner-2.gif" alt="" srcset="">
             <div id="preloadertext" class="textpreloader">Adding Note</div>
           </div>
-
           <button onclick="startpre();" id="addBtn" class="btn btn-primary my-3">Add note</button>
         </div>
       </div>
