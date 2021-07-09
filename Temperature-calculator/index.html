@@ -52,10 +52,10 @@
       <div style="border-radius: 13px;" class="temperature-container">
         <div class="maincontent">
           <label for="cel">Celsius</label>
-          <input class="input" type="number" />
+          <input oninput="celToFah();" id="celsiusInput" class="input" type="number" />
           <div class="fahrenheit">
           <label class="fah-label" for="fah">Fahrenheit</label>
-          <input class="input-media" class="input" type="number" /></div>
+          <input oninput="fahToCel();" id="fahrenheitInput" class="input-media" class="input" type="number" /></div>
         </div>
       </div>
     </div>
