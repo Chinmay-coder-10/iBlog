@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  background-color: #3164ff;
+  height: 82.9vh;
+}
+
+.temperature-container {
+  font-weight: bold;
+  font-family: "Roboto" "monospace";
+  background-color: whitesmoke;
+  height: 20vw;
+  width: 57vw;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.404);
+}
+.input {
+  justify-content: space-between;
+  margin-left: 18px;
+}
+.maincontent {
+  display: flex;
+  padding: 63px;
+}
+.fah-label {
+  margin-left: 83px;
+}
+label{
+  margin-bottom: 0px
+}
+input {
+  font-family: sans-serif;
+  outline: 1px solid blue;
+}
+input:focus {
+  outline: 1px solid blue;
+}
+.input-media{
+  margin: 5px;
+}
+@media screen and (max-width: 600px) {
+  input {
+    font-family: monospace;
+  }
+  .temperature-container {
+    background-color: whitesmoke;
+    height: 90vw;
+    width: 90vw;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.404);
+  }
+  .input {
+    display: flex;
+    margin-left: 18px;
+  }
+  .fahrenheit {
+    height: fit-content;
+    width: fit-content;
+    right: 7rem;
+    top: 21.5rem;
+    right: 5rem;
+    position: absolute;
+    margin-left: 1px;
+  }
+}
