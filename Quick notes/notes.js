@@ -122,7 +122,7 @@ function editNote(index) {
   }
 
   notesObj.findIndex((element, index) => {
-    addTxtedit.value = element.text
+    addTxtedit.value = element;
   });
   notesObj.splice(index, 1);
   localStorage.setItem("notes", JSON.stringify(notesObj));
