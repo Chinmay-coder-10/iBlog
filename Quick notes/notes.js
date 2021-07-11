@@ -115,6 +115,7 @@ search.addEventListener("input", function () {
 function editNote(index) {
   let notes = localStorage.getItem("notes");
   let addTxtedit = document.getElementById("addTxt");
+  let addTitle = document.getElementById("addTitle");
   if (notes == null) {
     notesObj = [];
   } else {
@@ -122,7 +123,8 @@ function editNote(index) {
   }
 
   notesObj.findIndex((element, index) => {
-    addTxtedit.value = element;
+    addTxtedit.value = element.text;
+    addTitle.value = element.title;
   });
   notesObj.splice(index, 1);
   localStorage.setItem("notes", JSON.stringify(notesObj));
