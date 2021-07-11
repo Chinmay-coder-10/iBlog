@@ -47,7 +47,6 @@ hr {
 }
 
 #addTxt:focus {
-  color: #1b00ff;
   background-color: #fff;
   box-shadow: 0 0 0 0;
 }
