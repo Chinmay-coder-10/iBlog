@@ -31,7 +31,6 @@ label{
   margin-bottom: 0px
 }
 input {
-  font-family: sans-serif;
   outline: 1px solid blue;
 }
 input:focus {
