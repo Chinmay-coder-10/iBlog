@@ -6,7 +6,6 @@ function celToFah() {
 };
 function fahToCel() {
     celsiusInput.value = (fahrenheitInput.value-32)*9/5;
-alert("Alert function complete");
 };
 
 
