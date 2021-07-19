@@ -10,7 +10,10 @@ main{
     align-items: center; 
     justify-content: center;
 }
-
+#searchAnchortag{
+position:relative;
+top: 30px;
+}
 .mainsearch{
     background-color: white;
     border-radius: 40px;
