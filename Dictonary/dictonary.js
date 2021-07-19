@@ -10,7 +10,7 @@ const resetValue =()=>{
     }
     searchTxt.value = "";
 }
-const vog =()={
+const vog =()=>{
    alert("Alert")
    searchWrapper.innerHTML = `<a href="https://www.google.com/search?q=${searchTxt.value}"> 
      View on Google 
