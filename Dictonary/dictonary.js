@@ -1,6 +1,6 @@
 let resetIcon = document.getElementsByClassName('resetIcon')[0];
 let searchTxt = document.getElementById('searchTxt');
-let searchWrapper = document.getElementsByClassName('searchWrapper');
+let searchWrapper = document.getElementsByClassName('searchWrapper);
 
 console.log()
  
