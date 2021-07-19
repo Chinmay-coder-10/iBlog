@@ -1,5 +1,6 @@
 let resetIcon = document.getElementsByClassName('resetIcon')[0];
 let searchTxt = document.getElementById('searchTxt');
+let searchWrapper = document.getElementsByClassName('searchWrapper');
 console.log()
  
 const resetValue =()=>{
@@ -8,3 +9,5 @@ const resetValue =()=>{
     }
     searchTxt.value = "";
 }
+
+searchWrapper.innerHTML = ``
