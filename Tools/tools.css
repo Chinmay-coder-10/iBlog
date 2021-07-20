@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+background:red;
+}
 
 main{
     height: 82.9vh;
