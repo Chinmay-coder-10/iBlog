@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Gurajada&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    background-color: #c4aaff;
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.mainsearch{
+    background-color: white;
+    border-radius: 40px;
+    /* visibility: hidden; */
+    /* transition: .3s ease-in; */
+    width: 22rem;
+    height: 3rem;
+    position: absolute;
+    top: 137px;
+}
+
+#searchIcon{
+    height: 23px;
+    margin-left: 8px;
+    top: 147px;
+    position: absolute;
+    right: 462px;
+}
+#searchTxt{
+    font-family: 'Gurajada', serif;;
+    font-size: xx-large;
+    width: 91%;
+    border: none;
+    outline: none;
+    position: relative;
+    left: 15px;
+    top: 6px;
+    height: 74%;
+}
+
+#reset-icon{
+    cursor: pointer;
+    height: 23px;
+    left: -12px;
+    position: relative;
+    top: 2px;
+}
+
+.viewgooglebtn{
+    background-color: #1462ff;
+    border-radius: 4px;
+    color: white;
+    font-size: 20px;
+    font-family: cursive;
+    display: none;
+    position: absolute;
+    bottom: 0;
+}
+
+.clickedsearchIcon{
+    position:absolute;
+    top: 0;
+    background-color: red;
+}
+
+
+/* -----------------------------------------
+  =Default css to make the demo more pretty
+-------------------------------------------- */
+
+
+  
+@keyframes fadeInAnimation {
+    100% {
+      opacity: 0;
+    }
+    0% {
+      opacity: 0.8;
+    }
+  }
+  
+  .sk-cube-grid {
+    width: 40px;
+    height: 40px;
+    margin: 100px auto;
+    position: relative;
+    top: 153px;
+  }
+  
+  .sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: #333;
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+    animation: sk-cubeGridScaleDelay 1s infinite ease-in-out;
+  }
+  .sk-cube-grid .sk-cube1 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.2s;
+    background-color: rgb(255, 166, 0);
+  }
+  .sk-cube-grid .sk-cube2 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    background-color: rgb(255, 166, 0);
+  }
+  .sk-cube-grid .sk-cube3 {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    background-color: rgb(255, 166, 0);
+  }
+  .sk-cube-grid .sk-cube4 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+    background-color: red;
+  }
+  .sk-cube-grid .sk-cube5 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+    background-color: red;
+  }
+  .sk-cube-grid .sk-cube6 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    background-color: red;
+  }
+  .sk-cube-grid .sk-cube7 {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    background-color: blue;
+  }
+  .sk-cube-grid .sk-cube8 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+    background-color: blue;
+  }
+  .sk-cube-grid .sk-cube9 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+    background-color: blue;
+  }
+  
+  @-webkit-keyframes sk-cubeGridScaleDelay {
+    0%,
+    70%,
+    100% {
+      -webkit-transform: scale3D(1, 1, 1);
+      transform: scale3D(1, 1, 1);
+    }
+    35% {
+      -webkit-transform: scale3D(0, 0, 1);
+      transform: scale3D(0, 0, 1);
+    }
+  }
+  
+  @keyframes sk-cubeGridScaleDelay {
+    0%,
+    70%,
+    100% {
+      -webkit-transform: scale3D(1, 1, 1);
+      transform: scale3D(1, 1, 1);
+    }
+    35% {
+      -webkit-transform: scale3D(0, 0, 1);
+      transform: scale3D(0, 0, 1);
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    #searchIcon{
+        position: absolute;
+        right: 100px;
+    }
+  }
