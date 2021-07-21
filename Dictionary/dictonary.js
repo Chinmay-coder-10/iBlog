@@ -15,6 +15,9 @@ const resetValue = () => {
   searchTxt.value = "";
 };
 function vog() {
+  if(searchTxt.value === ""){
+    return;
+}
   let url = "https://www.google.com/search?q=" + searchTxt.value;
   window.open(url);
 }
