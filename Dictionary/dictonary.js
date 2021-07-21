@@ -16,6 +16,7 @@ const resetValue = () => {
 };
 function vog() {
   if(searchTxt.value === ""){
+    alert("Nothing to search on Google");
     return;
 }
   let url = "https://www.google.com/search?q=" + searchTxt.value;
