@@ -1,178 +1,264 @@
-@import url('https://fonts.googleapis.com/css2?family=Gurajada&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-}
-main{
-    background-color: #c4aaff;
-    height: 100vh;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-}
 
-.mainsearch{
-    background-color: white;
-    border-radius: 40px;
-    /* visibility: hidden; */
-    /* transition: .3s ease-in; */
-    width: 22rem;
-    height: 3rem;
-    position: absolute;
-    top: 137px;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Gurajada&display=swap');
 
-#searchIcon{
-    height: 23px;
-    margin-left: 8px;
-    top: 147px;
-    position: absolute;
-    right: 462px;
-}
-#searchTxt{
-    font-family: 'Gurajada', serif;;
-    font-size: xx-large;
-    width: 91%;
-    border: none;
-    outline: none;
-    position: relative;
-    left: 15px;
-    top: 6px;
-    height: 74%;
-}
-
-#reset-icon{
-    cursor: pointer;
-    height: 23px;
-    left: -12px;
-    position: relative;
-    top: 2px;
-}
-
-.viewgooglebtn{
-    background-color: #1462ff;
-    border-radius: 4px;
-    color: white;
-    font-size: 20px;
-    font-family: cursive;
-    display: none;
-    position: absolute;
-    bottom: 0;
-}
-
-.clickedsearchIcon{
-    position:absolute;
-    top: 0;
-    background-color: red;
-}
-
-
-/* -----------------------------------------
-  =Default css to make the demo more pretty
--------------------------------------------- */
-
-
-  
-@keyframes fadeInAnimation {
-    100% {
-      opacity: 0;
+    * {
+        padding: 0;
+        margin: 0;
     }
-    0% {
-      opacity: 0.8;
-    }
-  }
-  
-  .sk-cube-grid {
-    width: 40px;
-    height: 40px;
-    margin: 100px auto;
-    position: relative;
-    top: 153px;
-  }
-  
-  .sk-cube-grid .sk-cube {
-    width: 33%;
-    height: 33%;
-    background-color: #333;
-    float: left;
-    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
-    animation: sk-cubeGridScaleDelay 1s infinite ease-in-out;
-  }
-  .sk-cube-grid .sk-cube1 {
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.2s;
-    background-color: rgb(255, 166, 0);
-  }
-  .sk-cube-grid .sk-cube2 {
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-    background-color: rgb(255, 166, 0);
-  }
-  .sk-cube-grid .sk-cube3 {
-    -webkit-animation-delay: 0.4s;
-    animation-delay: 0.4s;
-    background-color: rgb(255, 166, 0);
-  }
-  .sk-cube-grid .sk-cube4 {
-    -webkit-animation-delay: 0.1s;
-    animation-delay: 0.1s;
-    background-color: red;
-  }
-  .sk-cube-grid .sk-cube5 {
-    -webkit-animation-delay: 0.2s;
-    animation-delay: 0.2s;
-    background-color: red;
-  }
-  .sk-cube-grid .sk-cube6 {
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-    background-color: red;
-  }
-  .sk-cube-grid .sk-cube7 {
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
-    background-color: blue;
-  }
-  .sk-cube-grid .sk-cube8 {
-    -webkit-animation-delay: 0.1s;
-    animation-delay: 0.1s;
-    background-color: blue;
-  }
-  .sk-cube-grid .sk-cube9 {
-    -webkit-animation-delay: 0.2s;
-    animation-delay: 0.2s;
-    background-color: blue;
-  }
-  
-  @-webkit-keyframes sk-cubeGridScaleDelay {
-    0%,
-    70%,
-    100% {
-      -webkit-transform: scale3D(1, 1, 1);
-      transform: scale3D(1, 1, 1);
-    }
-    35% {
-      -webkit-transform: scale3D(0, 0, 1);
-      transform: scale3D(0, 0, 1);
-    }
-  }
-  
-  @keyframes sk-cubeGridScaleDelay {
-    0%,
-    70%,
-    100% {
-      -webkit-transform: scale3D(1, 1, 1);
-      transform: scale3D(1, 1, 1);
-    }
-    35% {
-      -webkit-transform: scale3D(0, 0, 1);
-      transform: scale3D(0, 0, 1);
-    }
-  }
 
-  @media screen and (max-width: 600px) {
-    #searchIcon{
+    .main-container {
+        background-color: #ff7600b5;
+        height: 26rem;
+    }
+
+    /***** Global Style *****/
+    p {
+        font-size: 20px;
+        color: #444;
+    }
+
+    /***** Global Slide *****/
+    .slide-right,
+    .slide-left {
+        width: 100%;
+    }
+
+    /***** Slide Right *****/
+    .slide-right {
+        animation: 1.5s slide-right;
+    }
+
+    @keyframes slide-right {
+        from {
+            margin-left: -100%;
+        }
+
+        to {
+            margin-left: 0%;
+        }
+    }
+
+    /***** Slide Left *****/
+    .slide-left {
+        animation: 0.2s slide-left;
+    }
+
+    @keyframes slide-left {
+        from {
+            margin-left: 100%;
+        }
+
+        to {
+            margin-left: 0%;
+        }
+    }
+
+    /***** Misc Styles *****/
+    .container {
+        width: 500px;
+        overflow: hidden;
         position: absolute;
-        right: 100px;
+        top: 10rem;
     }
-  }
+
+    /***** FadeIn Underline *****/
+    .line {
+        border-bottom: 3px solid red;
+        width: 200px;
+        margin: auto;
+    }
+
+    .fade-in {
+        animation: fadeIn ease .3s;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .introp {
+        font-family: system-ui;
+        font-size: 34px;
+        color: #0008ff;
+    }
+
+    .mainsearch {
+        background: white;
+        height: 40px;
+        width: 40rem;
+        border-radius: 3px;
+        position: absolute;
+        top: 186px;
+        left: 28rem;
+    }
+
+    #searchTxt {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        font-family: 'Gurajada', serif;
+        font-size: xxx-large;
+    }
+
+    #reset-icon {
+        cursor: pointer;
+        height: 23px;
+        left: -12px;
+        position: relative;
+        top: -2.188rem;
+        left: 37.688rem;
+    }
+
+    #searchbtn {
+        background: black;
+        color: white;
+        position: absolute;
+        left: 40.5rem;
+        top: 0rem;
+        box-shadow: 0 0 0 0 white;
+    }
+
+    .defination {
+        position: absolute;
+        top: 16rem;
+        width: 53rem;
+        left: 27rem;
+        font-family: 'Gurajada';
+    }
+
+    .definationp {
+        font-size: xx-large;
+        display: none;
+    }
+    .viewongooglebtn{
+        background-color: #1462ff;
+        border-radius: 4px;
+        color: white;
+        font-size: 20px;
+        font-family: cursive;
+        /* display: none; */
+        position: relative;
+        bottom: 0;
+        left: 0rem;
+        top: 2px;
+        width: 170px;
+    }
+    .viewongooglebtn:hover{
+        color: white;
+        width: 173px;
+    }
+    .viewongooglebtn:hover::after{
+        content: '\00bb';
+        position: relative;
+        left: 5px;
+        opacity: 1;
+        width: 45px;
+    }
+    @keyframes fadeInAnimation {
+        100% {
+          opacity: 0;
+        }
+        0% {
+          opacity: 0.8;
+        }
+      }
+      
+      .sk-cube-grid {
+        width: 40px;
+        height: 40px;
+        margin: 100px auto;
+        position: relative;
+        top: -69px;
+      }
+      
+      .sk-cube-grid .sk-cube {
+        width: 33%;
+        height: 33%;
+        background-color: #333;
+        float: left;
+        -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+        animation: sk-cubeGridScaleDelay 1s infinite ease-in-out;
+      }
+      .sk-cube-grid .sk-cube1 {
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.2s;
+        background-color: #0095ffba;
+      }
+      .sk-cube-grid .sk-cube2 {
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+        background-color: #0095ffba;
+      }
+      .sk-cube-grid .sk-cube3 {
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+        background-color: #0095ffba;
+      }
+      .sk-cube-grid .sk-cube4 {
+        -webkit-animation-delay: 0.1s;
+        animation-delay: 0.1s;
+        background-color: red;
+      }
+      .sk-cube-grid .sk-cube5 {
+        -webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s;
+        background-color: red;
+      }
+      .sk-cube-grid .sk-cube6 {
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+        background-color: red;
+      }
+      .sk-cube-grid .sk-cube7 {
+        -webkit-animation-delay: 0s;
+        animation-delay: 0s;
+        background-color: blue;
+      }
+      .sk-cube-grid .sk-cube8 {
+        -webkit-animation-delay: 0.1s;
+        animation-delay: 0.1s;
+        background-color: blue;
+      }
+      .sk-cube-grid .sk-cube9 {
+        -webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s;
+        background-color: blue;
+      }
+      
+      @-webkit-keyframes sk-cubeGridScaleDelay {
+        0%,
+        70%,
+        100% {
+          -webkit-transform: scale3D(1, 1, 1);
+          transform: scale3D(1, 1, 1);
+        }
+        35% {
+          -webkit-transform: scale3D(0, 0, 1);
+          transform: scale3D(0, 0, 1);
+        }
+      }
+      
+      @keyframes sk-cubeGridScaleDelay {
+        0%,
+        70%,
+        100% {
+          -webkit-transform: scale3D(1, 1, 1);
+          transform: scale3D(1, 1, 1);
+        }
+        35% {
+          -webkit-transform: scale3D(0, 0, 1);
+          transform: scale3D(0, 0, 1);
+        }
+      }
+    .preloader{
+        top: 149px;
+        position: absolute;
+        left: 47rem;
+    }
