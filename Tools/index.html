@@ -2,103 +2,87 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-    crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./tools.css" />
-  <title>iBlog</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iBlog-Tools</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="tools.css">
 </head>
 
+
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand iBlog" href="/"><b>iBlog</b></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
-          </li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand iBlog" href="/"><b>iBlog</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                    </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="../Text analyzer/index.html">TextAnalyzer</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../Quick notes/index.html" tabindex="-1" aria-disabled="true">Quick notes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="./" tabindex="-1" aria-disabled="true">Tools</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-outline-light" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-  <main style="display: flex;">
-    <a href="../Temperature-calculator/">
-    <li class="options-li">
-      
-      <div class="options-container">
-        <h3 class="options-heading">Temperature converter</h3>
-        <p class="options-description">Convert Celsius to fahrenheit and fahrenheit to celsius easily and efficiently</p>
-      </a>
-    <a href="../Dictionary/">
-    <li class="options-li dictonary-li">
-      
-      <div class="options-container dictonary-li">
-        <h3 class="options-heading dictonary-li">Dictionary</h3>
-        <p class="options-description dictonary-li">Search any word to get defination and meaning</p>
-      </a>
-    
-        <!-- <img class="img-fluid" src="" alt="">
-        <a class="temperature-link" href="../Temperature-calculator/">
-          <div tabindex="-1" class="text">Temperature-converter</div>
-        </a>
-        <div class="temperature-next-icon">
-        <div class="sc-1gyxcpm-0 csDfHB ojwc4z-4 dOHSmX" style="width:32px;height:32px"><svg viewBox="0 0 32 32"
-            fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="14.5" y="11.5" width="10" height="13" stroke="white"></rect>
-            <path d="M16 21.5H23" stroke="white"></path>
-            <path d="M16 19.5H23" stroke="white"></path>
-            <path d="M16 17.5H23" stroke="white"></path>
-          </svg></div>
-          <div class="sc-1gyxcpm-0 csDfHB" style="width:24px;height:24px"><svg viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-              <path d="M9 7L10 6L16 12L10 18L9 17L14.17 12L9 7Z"></path>
-            </svg></div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Text analyzer/index.html">TextAnalyzer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Quick notes/index.html" tabindex="-1" aria-disabled="true">Quick
+                            notes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./index.html" tabindex="-1" aria-disabled="true">Dictonary</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-        <p class="temperature-description">Convert PDFs to editable Word documents</p> -->
-      </div>
+    </nav>
+    <div style="width: 100vw;" class="row">
+        <div class="temperature-converter-card maincard">
+            <h4 class="heading-content">Temperature converter</h4>
+            <p>
+            <h6 class="description-content"> Convert Temperature of celsius to fahrenheit and fahrenheit and celsius
+            </h6>
+            </p>
+            <div style="background: hsl(21deg 100% 65%);
+        height: 35px;
+        width: 95px;
+        transform: translate(19px, 8px);
+        border-radius: 2px;
+        text-align: center;" class="view">
+                <a class="link-content" href="../Temperature-calculator/">View</a>
+            </div>
+        </div>
+        <div class="temperature-converter-card maincard">
+            <h4 class="heading-content">Dictionary</h4>
+            <p>
+            <h6 class="description-content">Get the meaning of any word easily and quickly
+            </h6>
+            </p>
+            <div style="background: hsl(21deg 100% 65%);
+        height: 35px;
+        width: 95px;
+        transform: translate(19px, 8px);
+        border-radius: 2px;
+        text-align: center;" class="view">
+                <a class="link-content" href="../Dictionary/">View</a>
+            </div>
+        </div>
     </div>
-    </li>
-  </main>
-  <footer class="container-fluid bg-dark my-0 py-3 text-light">
-    <p class="mb-0 text-center">Copyright © 2021-2022 <a class="text-light"
-        href="https://chinmay-coder-10.github.io/iBlog/">iBlog</a></p>
-  </footer>
-
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="tools.js"></script>
 
 </html>
