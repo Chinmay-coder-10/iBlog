@@ -23,14 +23,14 @@
     }
 
     .main-container {
-        background-color: #ff7600b5;
+        background: url(../Images/a-city-img-new\ -\ Copy\ \(4\)\ -\ Copy\ copy.jpg) no-repeat;
         height: 26rem;
     }
 
     /***** Global Style *****/
     p {
         font-size: 20px;
-        color: #444;
+        color: white;
     }
 
     /***** Global Slide *****/
@@ -138,16 +138,170 @@
         position: absolute;
         left: 40.5rem;
         top: 0rem;
+        box-shadow: 0 0 0 0 white;
     }
-    .defination{
+
+    .defination {
         position: absolute;
         top: 16rem;
         width: 53rem;
         left: 27rem;
         font-family: 'Gurajada';
     }
-    .definationp{
+
+    .definationp {
         font-size: xx-large;
+        display: none;
+        font-size: 20px;
+        color: black;
+        background: #ffff00bf;
+        width: fit-content;
+        /* border-radius: 3px; */
+        font-size: xx-large;
+    }
+
+    .viewongooglebtn {
+        background-color: #1462ff;
+        border-radius: 4px;
+        color: white;
+        font-size: 20px;
+        font-family: cursive;
+        /* display: none; */
+        position: relative;
+        bottom: 0;
+        left: 0rem;
+        top: 2px;
+        width: 170px;
+    }
+
+    .viewongooglebtn:hover {
+        color: white;
+        width: 173px;
+    }
+
+    .viewongooglebtn:hover::after {
+        content: '\00bb';
+        position: relative;
+        left: 5px;
+        opacity: 1;
+        width: 45px;
+    }
+
+    @keyframes fadeInAnimation {
+        100% {
+            opacity: 0;
+        }
+
+        0% {
+            opacity: 0.8;
+        }
+    }
+
+    .sk-cube-grid {
+        width: 40px;
+        height: 40px;
+        margin: 100px auto;
+        position: relative;
+        top: -69px;
+    }
+
+    .sk-cube-grid .sk-cube {
+        width: 33%;
+        height: 33%;
+        background-color: #333;
+        float: left;
+        -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+        animation: sk-cubeGridScaleDelay 1s infinite ease-in-out;
+    }
+
+    .sk-cube-grid .sk-cube1 {
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.2s;
+        background-color: #0095ffba;
+    }
+
+    .sk-cube-grid .sk-cube2 {
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+        background-color: #0095ffba;
+    }
+
+    .sk-cube-grid .sk-cube3 {
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+        background-color: #0095ffba;
+    }
+
+    .sk-cube-grid .sk-cube4 {
+        -webkit-animation-delay: 0.1s;
+        animation-delay: 0.1s;
+        background-color: red;
+    }
+
+    .sk-cube-grid .sk-cube5 {
+        -webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s;
+        background-color: red;
+    }
+
+    .sk-cube-grid .sk-cube6 {
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+        background-color: red;
+    }
+
+    .sk-cube-grid .sk-cube7 {
+        -webkit-animation-delay: 0s;
+        animation-delay: 0s;
+        background-color: blue;
+    }
+
+    .sk-cube-grid .sk-cube8 {
+        -webkit-animation-delay: 0.1s;
+        animation-delay: 0.1s;
+        background-color: blue;
+    }
+
+    .sk-cube-grid .sk-cube9 {
+        -webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s;
+        background-color: blue;
+    }
+
+    @-webkit-keyframes sk-cubeGridScaleDelay {
+
+        0%,
+        70%,
+        100% {
+            -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+        }
+
+        35% {
+            -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+        }
+    }
+
+    @keyframes sk-cubeGridScaleDelay {
+
+        0%,
+        70%,
+        100% {
+            -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+        }
+
+        35% {
+            -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+        }
+    }
+
+    .preloader {
+        top: 149px;
+        position: absolute;
+        left: 47rem;
     }
 </style>
 
@@ -193,81 +347,159 @@
                 </div>
             </div>
             <div class="mainsearch">
-                <input autocomplete="off" type="text" id="searchTxt">
+                <input spellcheck="false" autocomplete="off" type="text" id="searchTxt">
                 <img onclick="resetValue();" class="resetIcon" id="reset-icon" src="../Images/reset-icon.png" alt="">
                 <button id="searchbtn" class="btn">Search</button>
             </div>
             <div class="defination">
                 <p class="definationp"></p>
+                <div style="display: none;" onclick="viewongoogle();" class="viewongooglebtn btn">View on google</div>
+            </div>
+            <div style="display: none;" class="sk-cube-grid preloader">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+            </div>
+            <div style="display: none;" class="notfound">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>No result found</strong> Make sure you have entered correct word
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+            </div>
         </div>
     </main>
     <script>
-let resetIcon = document.getElementsByClassName("resetIcon")[0];
-// const userName = prompt("Enter your name");
-const searchTxt = document.querySelector("#searchTxt");
-//let vogWrapper = document.getElementsByClassName("vogWrapper")[0];
-let searchbtn = document.getElementById("searchbtn");
-let mainsearch = document.getElementsByClassName("mainsearch")[0];
-let viewgooglebtn = document.getElementsByClassName("viewgooglebtn")[0];
-let preloader = document.getElementsByClassName("preloader")[0];
-let info = document.getElementsByClassName("definationp")[0];
-// let preloaderStart = document.getElementsByClassName("preloader-start")[0];
-// let info = document.getElementsByClassName("info")[0];
-// document.title = `Welcome ${userName}`;
-console.log();
+        let resetIcon = document.getElementsByClassName("resetIcon")[0];
+        // const userName = prompt("Enter your name");
+        const searchTxt = document.querySelector("#searchTxt");
+        //let vogWrapper = document.getElementsByClassName("vogWrapper")[0];
+        let searchbtn = document.getElementById("searchbtn");
+        let mainsearch = document.getElementsByClassName("mainsearch")[0];
+        let notfound = document.getElementsByClassName("notfound")[0];
+        let viewongooglebtn = document.getElementsByClassName("viewongooglebtn")[0];
+        let preloader = document.getElementsByClassName("preloader")[0];
+        let info = document.getElementsByClassName("definationp")[0];
+        // let preloaderStart = document.getElementsByClassName("preloader-start")[0];
+        // let info = document.getElementsByClassName("info")[0];
+        // document.title = `Welcome ${userName}`;
+        console.log(notfound);
 
-const resetValue = () => {
-  if (searchTxt.value === "") {
-    return;
-  }
-  searchTxt.value = "";
-};
-function vog() {
-  if (searchTxt.value === "") {
-    return;
-  }
-  let url = "https://www.google.com/search?q=" + searchTxt.value;
-  window.open(url);
-}
-searchbtn.addEventListener('click', () => {
-  
-  // preloader.style.display = "block";
-  // viewgooglebtn.style.display = "block"  
-  if (searchTxt.value!= "") {
-    //preloader.style.display = "block";
-    //viewgooglebtn.style.display = "block";
-  }
-  
-  function stoppre() {
-    preloader.style.display = "none"
-    // viewgooglebtn.style.display = "block";
-    info.style.display = "block";
-  }
-  function startpre() {
-    preloader.style.display = "block";
-  }
-  setTimeout(stoppre, 500)
-  let word = searchTxt.value;
-  getdata(word);
-  
-});
-  
-async function getdata(word) {
-  let response = await fetch(
-    `https://dictionaryapi.com/api/v3/references/learners/json/${word}?key=f276c47d-117a-4e13-8554-01e72d75d1d9`
-  );
-  const data = await response.json();
-  console.log(data);
-  let defination = data[0].shortdef[0];
-  info.innerHTML = defination;
-}
+        const resetValue = () => {
+            if (searchTxt.value === "") {
+                return;
+            }
+            searchTxt.value = "";
+            info.innerHTML = "";
+            viewongooglebtn.style.display = "none";
+        };
+        function viewongoogle() {
+            if (searchTxt.value === "") {
+                return;
+            }
+            let url = "https://www.google.com/search?q=" + searchTxt.value+" meaning";
+            window.open(url);
+        }
+        searchbtn.addEventListener('click', () => {
+            // preloader.style.display = "block";
+            viewongooglebtn.style.display = "block";
+            if (searchTxt.value != "") {
+                preloader.style.display = "block";
+                //viewgooglebtn.style.display = "block";
 
-// function viewg() {
-//     let url = "https://www.google.com/search?q="+searchTxt.value;
-//     vogWrapper.innerHTML = `<a href="${url}">view on google</a>`
-// }
+                if (info.innerHTML !== "") {
+                    preloader.style.display = "none";
+                    if (searchTxt.innerHTML != "") {
+                        preloader.style.display = "block";
+                    }
+                }
+                if (searchTxt.value != "") {
+                    preloader.style.display = "block";
+                }
 
-viewg();
+            }
+            function stoppre() {
+                preloader.style.display = "none"
+                // viewgooglebtn.style.display = "block";
+                info.style.display = "block";
+            }
+            function startpre() {
+                preloader.style.display = "block";
+            }
+            setTimeout(stoppre, 500)
+            let word = searchTxt.value;
+            getdata(word);
+
+        });
+        searchTxt.addEventListener("keyup", (e) => {
+            //notfound.style.display = "none";
+            if (e.keyCode === 13) {
+                viewongooglebtn.style.display = "block";
+                if (searchTxt.value != "") {
+                    preloader.style.display = "block";
+                    //viewgooglebtn.style.display = "block";
+
+                    if (info.innerHTML !== "") {
+                        preloader.style.display = "none";
+                        if (searchTxt.innerHTML != "") {
+                            preloader.style.display = "block";
+                        }
+                    }
+                    if (searchTxt.value != "") {
+                        preloader.style.display = "block";
+                    }
+
+                }
+                function stoppre() {
+                    preloader.style.display = "none"
+                    // viewgooglebtn.style.display = "block";
+                    info.style.display = "block";
+                }
+                function startpre() {
+                    preloader.style.display = "block";
+                }
+                setTimeout(stoppre, 500)
+                let word = searchTxt.value;
+                getdata(word);
+                
+            }
+           
+            
+        })
+        async function getdata(word) {
+            let response = await fetch(
+                `https://dictionaryapi.com/api/v3/references/learners/json/${word}?key=f276c47d-117a-4e13-8554-01e72d75d1d9`
+            );
+            const data = await response.json();
+            if(!data.length ) {
+                notfound.style.display = "block";
+                viewongooglebtn.style.display = "none";
+                preloader.style.display = "none";
+                //notfound.style.display = "none";
+               return;
+            }
+            if(data.length) {
+                notfound.innerHTML = "";
+                //notfound.style.display = "none";
+               //return;
+            }
+            console.log(data);
+            
+            let defination = data[0].shortdef[0];
+            info.innerHTML = defination;
+            
+        }
+        
+        // function viewg() {
+        //     let url = "https://www.google.com/search?q="+searchTxt.value;
+        //     vogWrapper.innerHTML = `<a href="${url}">view on google</a>`
+        // }
+
 
     </script>
 </body>
