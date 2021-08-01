@@ -12,11 +12,9 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <title>Dictionary</title>
     <link rel="stylesheet" href="./dictonary.css">
-    
-        <title>iBlog -Dictionary</title>
 </head>
-
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -44,44 +42,88 @@
                         <a class="nav-link active" href="./index.html" tabindex="-1" aria-disabled="true">Dictonary</a>
                     </li>
                 </ul>
-                <form class="d-flex">
+                <!-- <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                     <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
+                </form> -->
             </div>
         </div>
     </nav>
     <main>
         <div class="main-container">
-            <div class='container'>
+            <div style="height: 100%; background:#0000005e;" class="overlay">
+                <div style="position: absolute;top: 7rem; left: 19rem;" class="chi">
+                    <h1 style="color: white;">Are you looking for any word?</h1>
+                    <h1 style="color: white;">Then search it</h1>
+                </div>
+            </div>
+            <!-- <div class='container'>
                 <div class="slide-right">
                     <p class="introp"><strong>Fast and </strong></p>
                     <p class="introp" style="margin-top: -19px;"><strong>Reliable searches</strong></p>
                 </div>
-            </div>
+            </div> -->
+
             <div class="mainsearch">
-                <input spellcheck="false" autocomplete="off" type="text" id="searchTxt">
+                <input placeholder="Search any word" spellcheck="false" autocomplete="off" type="text" id="searchTxt">
                 <img onclick="resetValue();" class="resetIcon" id="reset-icon" src="../Images/reset-icon.png" alt="">
                 <button id="searchbtn" class="btn">Search</button>
             </div>
-            <div class="defination">
-                <p class="definationp"></p>
-                <div style="display: none;" onclick="viewongoogle();" class="viewongooglebtn btn">View on google</div>
+            <div style="top: 18rem;" class="defination">
+                <p style="position: absolute;
+                top: 1rem;
+                left: -7rem;" class="definationp"></p>
+                <div style="display: none;" onclick="viewongoogle();" class="viewongooglebtn btn">View on google
+                </div>
             </div>
+            <!-- <div class="container">
+                <div id="notes" class="row container-fluid">
+                    <div class="card mx-3 my-1" style="width: 18rem">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p  style="color: black;" class="card-text">
+                          Some quick example text to build on the card title and make up the
+                          bulk of the card's content.
+                        </p>
+                      </div>
+                    </div>
+            
+                  </div>
+            </div> -->
             <div style="display: none;" class="sk-cube-grid preloader">
-            <div class="sk-cube sk-cube1"></div>
-            <div class="sk-cube sk-cube2"></div>
-            <div class="sk-cube sk-cube3"></div>
-            <div class="sk-cube sk-cube4"></div>
-            <div class="sk-cube sk-cube5"></div>
-            <div class="sk-cube sk-cube6"></div>
-            <div class="sk-cube sk-cube7"></div>
-            <div class="sk-cube sk-cube8"></div>
-            <div class="sk-cube sk-cube9"></div>
-          </div>
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+            </div>
+        </div>
+        <div style="display: none;" class="notfound">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>No result found</strong> Make sure you have entered correct word
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+            </div>
+        </div>
+
+        </div>
+        <button id="addBtn" class="btn">View history</button>
+        <div style="display: flex;" id="notes" class="row container-fluid">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">You searched for</h5>
+                    <p style="color: black;" class="card-text">Some quick example text to build on the card title and
+                        make up the bulk of the card's content.</p>
+                </div>
+            </div>
         </div>
     </main>
-    <script src="./dictonary.js"></script>
+
+    <script defer src="./dictonary.js"></script>
 </body>
 
 </html>
