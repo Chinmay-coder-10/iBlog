@@ -1,301 +1,267 @@
-@import url('https://fonts.googleapis.com/css2?family=Gurajada&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gurajada&display=swap");
 
-    * {
-        padding: 0;
-        margin: 0;
-        scroll-behavior: smooth;
-    }
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
 
-    .main-container {
-        background: url(../Images/bg-dictionary-books\ -new.jpg) no-repeat;
-        height: 26rem;
-    }
+.main-container {
+  background: url(../Images/bg-dictionary-books\ -new.jpg) no-repeat;
+  height: 26rem;
+}
 
-    /***** Global Style *****/
-    p {
-        font-size: 20px;
-        color: black;
-    }
+/***** Global Style *****/
+p {
+  font-size: 20px;
+  color: black;
+}
 
-    /***** Global Slide *****/
-    .slide-right,
-    .slide-left {
-        width: 100%;
-    }
+.introp {
+  font-family: system-ui;
+  font-size: 34px;
+  color: #0008ff;
+}
 
-    /***** Slide Right *****/
-    .slide-right {
-        animation: 1.5s slide-right;
-    }
+.mainsearch {
+  background: white;
+  height: 40px;
+  width: 40rem;
+  border-radius: 3px;
+  position: absolute;
+  top: 15.25rem;
+  left: 20rem;
+}
 
-    @keyframes slide-right {
-        from {
-            margin-left: -100%;
-        }
+#searchTxt {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-family: "Gurajada", serif;
+  font-size: xxx-large;
+}
 
-        to {
-            margin-left: 0%;
-        }
-    }
+#reset-icon {
+  cursor: pointer;
+  height: 23px;
+  left: -12px;
+  position: relative;
+  top: -2.188rem;
+  left: 37.688rem;
+}
 
-    /***** Slide Left *****/
-    .slide-left {
-        animation: 0.2s slide-left;
-    }
+#searchbtn {
+  background: black;
+  color: white;
+  position: absolute;
+  left: 40.5rem;
+  top: 0rem;
+  box-shadow: 0 0 0 0 white;
+}
 
-    @keyframes slide-left {
-        from {
-            margin-left: 100%;
-        }
+.defination {
+  position: absolute;
+  top: 16rem;
+  width: 53rem;
+  left: 27rem;
+  font-family: "Gurajada";
+}
 
-        to {
-            margin-left: 0%;
-        }
-    }
+.definationp {
+  font-size: xx-large;
+  display: none;
+  font-size: 20px;
+  color: black;
+  background: #ffff00bf;
+  width: fit-content;
+  /* border-radius: 3px; */
+  font-size: 36px;
+}
 
-    /***** Misc Styles *****/
-    .container {
-        width: 500px;
-        overflow: hidden;
-        position: absolute;
-        top: 10rem;
-    }
+.viewongooglebtn {
+  background-color: #1462ff;
+  border-radius: 4px;
+  color: white;
+  font-size: 20px;
+  font-family: cursive;
+  /* display: none; */
+  position: relative;
+  bottom: 0;
+  left: -7rem;
+  top: 5rem;
+  width: 170px;
+  cursor: pointer;
+}
 
-    /***** FadeIn Underline *****/
-    .line {
-        border-bottom: 3px solid red;
-        width: 200px;
-        margin: auto;
-    }
+.viewongooglebtn:hover {
+  color: white;
+  width: 179px;
+}
 
-    .fade-in {
-        animation: fadeIn ease .3s;
-    }
+.viewongooglebtn:hover::after {
+  content: "\00bb";
+  position: relative;
+  left: 5px;
+  opacity: 1;
+  width: 45px;
+}
 
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-        }
+@keyframes fadeInAnimation {
+  100% {
+    opacity: 0;
+  }
 
-        100% {
-            opacity: 1;
-        }
-    }
+  0% {
+    opacity: 0.8;
+  }
+}
 
-    .introp {
-        font-family: system-ui;
-        font-size: 34px;
-        color: #0008ff;
-    }
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  position: relative;
+  top: -69px;
+}
 
-    .mainsearch {
-        background: white;
-        height: 40px;
-        width: 40rem;
-        border-radius: 3px;
-        position: absolute;
-        top: 15.25rem;
-        left: 20rem;
-    }
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #333;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+  animation: sk-cubeGridScaleDelay 1s infinite ease-in-out;
+}
 
-    #searchTxt {
-        width: 100%;
-        height: 100%;
-        border: none;
-        outline: none;
-        font-family: 'Gurajada', serif;
-        font-size: xxx-large;
-    }
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.2s;
+  background-color: #0095ffba;
+}
 
-    #reset-icon {
-        cursor: pointer;
-        height: 23px;
-        left: -12px;
-        position: relative;
-        top: -2.188rem;
-        left: 37.688rem;
-    }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  background-color: #0095ffba;
+}
 
-    #searchbtn {
-        background: black;
-        color: white;
-        position: absolute;
-        left: 40.5rem;
-        top: 0rem;
-        box-shadow: 0 0 0 0 white;
-    }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  background-color: #0095ffba;
+}
 
-    .defination {
-        position: absolute;
-        top: 16rem;
-        width: 53rem;
-        left: 27rem;
-        font-family: 'Gurajada';
-    }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+  background-color: red;
+}
 
-    .definationp {
-        font-size: xx-large;
-        display: none;
-        font-size: 20px;
-        color: black;
-        background: #ffff00bf;
-        width: fit-content;
-        /* border-radius: 3px; */
-        font-size: 36px;
-    }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  background-color: red;
+}
 
-    .viewongooglebtn {
-        background-color: #1462ff;
-        border-radius: 4px;
-        color: white;
-        font-size: 20px;
-        font-family: cursive;
-        /* display: none; */
-        position: relative;
-        bottom: 0;
-        left: -7rem;
-        top: 5rem;
-        width: 170px;
-        cursor: pointer;
-    }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  background-color: red;
+}
 
-    .viewongooglebtn:hover {
-        color: white;
-        width: 179px;
-    }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  background-color: blue;
+}
 
-    .viewongooglebtn:hover::after {
-        content: '\00bb';
-        position: relative;
-        left: 5px;
-        opacity: 1;
-        width: 45px;
-    }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+  background-color: blue;
+}
 
-    @keyframes fadeInAnimation {
-        100% {
-            opacity: 0;
-        }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  background-color: blue;
+}
 
-        0% {
-            opacity: 0.8;
-        }
-    }
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%,
+  70%,
+  100% {
+    -webkit-transform: scale3D(1, 1, 1);
+    transform: scale3D(1, 1, 1);
+  }
 
-    .sk-cube-grid {
-        width: 40px;
-        height: 40px;
-        margin: 100px auto;
-        position: relative;
-        top: -69px;
-    }
+  35% {
+    -webkit-transform: scale3D(0, 0, 1);
+    transform: scale3D(0, 0, 1);
+  }
+}
 
-    .sk-cube-grid .sk-cube {
-        width: 33%;
-        height: 33%;
-        background-color: #333;
-        float: left;
-        -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
-        animation: sk-cubeGridScaleDelay 1s infinite ease-in-out;
-    }
+@keyframes sk-cubeGridScaleDelay {
+  0%,
+  70%,
+  100% {
+    -webkit-transform: scale3D(1, 1, 1);
+    transform: scale3D(1, 1, 1);
+  }
 
-    .sk-cube-grid .sk-cube1 {
-        -webkit-animation-delay: 0.3s;
-        animation-delay: 0.2s;
-        background-color: #0095ffba;
-    }
+  35% {
+    -webkit-transform: scale3D(0, 0, 1);
+    transform: scale3D(0, 0, 1);
+  }
+}
 
-    .sk-cube-grid .sk-cube2 {
-        -webkit-animation-delay: 0.3s;
-        animation-delay: 0.3s;
-        background-color: #0095ffba;
-    }
+.preloader {
+  top: 149px;
+  position: absolute;
+  left: 47rem;
+}
 
-    .sk-cube-grid .sk-cube3 {
-        -webkit-animation-delay: 0.4s;
-        animation-delay: 0.4s;
-        background-color: #0095ffba;
-    }
+.mystyle {
+  width: 100%;
+  padding: 25px;
+  background-color: coral;
+  color: white;
+  font-size: 25px;
+}
 
-    .sk-cube-grid .sk-cube4 {
-        -webkit-animation-delay: 0.1s;
-        animation-delay: 0.1s;
-        background-color: red;
-    }
+.show {
+  display: flex;
+}
 
-    .sk-cube-grid .sk-cube5 {
-        -webkit-animation-delay: 0.2s;
-        animation-delay: 0.2s;
-        background-color: red;
-    }
 
-    .sk-cube-grid .sk-cube6 {
-        -webkit-animation-delay: 0.3s;
-        animation-delay: 0.3s;
-        background-color: red;
-    }
-
-    .sk-cube-grid .sk-cube7 {
-        -webkit-animation-delay: 0s;
-        animation-delay: 0s;
-        background-color: blue;
-    }
-
-    .sk-cube-grid .sk-cube8 {
-        -webkit-animation-delay: 0.1s;
-        animation-delay: 0.1s;
-        background-color: blue;
-    }
-
-    .sk-cube-grid .sk-cube9 {
-        -webkit-animation-delay: 0.2s;
-        animation-delay: 0.2s;
-        background-color: blue;
-    }
-
-    @-webkit-keyframes sk-cubeGridScaleDelay {
-
-        0%,
-        70%,
-        100% {
-            -webkit-transform: scale3D(1, 1, 1);
-            transform: scale3D(1, 1, 1);
-        }
-
-        35% {
-            -webkit-transform: scale3D(0, 0, 1);
-            transform: scale3D(0, 0, 1);
-        }
-    }
-
-    @keyframes sk-cubeGridScaleDelay {
-
-        0%,
-        70%,
-        100% {
-            -webkit-transform: scale3D(1, 1, 1);
-            transform: scale3D(1, 1, 1);
-        }
-
-        35% {
-            -webkit-transform: scale3D(0, 0, 1);
-            transform: scale3D(0, 0, 1);
-        }
-    }
-
-    .preloader {
-        top: 149px;
-        position: absolute;
-        left: 47rem;
-    }
-
-    .mystyle {
-        width: 100%;
-        padding: 25px;
-        background-color: coral;
-        color: white;
-        font-size: 25px;
-    }
-    .show{
-        display: flex;
-    }
+.heading {
+  color: white;
+}
+*::selection{
+    background-color: rgb(228, 234, 255);
+    color: rgb(0, 60, 255);
+}
+@media screen and (max-width: 600px) {
+  #heading1container {
+    height: 52px;
+    width: 85px;
+  }
+  .heading1 {
+    position: absolute;
+    left: -17rem;
+    color: white;
+  }
+  .heading2 {
+    position: absolute;
+    left: -17rem;
+    top: 6.5rem;
+    color: white;
+  }
+  .mainsearch {
+    position: absolute;
+    left: 2rem;
+    top: 20rem;
+    width: 57vw;
+  }
+}

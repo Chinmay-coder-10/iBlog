@@ -2,14 +2,14 @@ console.log("HI script");
 showNotes();
 
 function showNotes() {
-  let notes = localStorage.getItem("notes");
-  if (notes == null) {
-    notesObj = [];
+  let wordsearched = localStorage.getItem("wordsearched");
+  if (wordsearched == null) {
+    wordhistory = [];
   } else {
-    notesObj = JSON.parse(notes);
+    wordhistory = JSON.parse(wordsearched);
   }
   let html = "";
-  notesObj.forEach(function (element, index) {
+  wordhistory.forEach(function (element, index) {
     html += `
     <div class="card my-3 mx-3 shownotec historycard" style="width: 18rem;">
     <div class="card-body">
@@ -33,7 +33,7 @@ function showNotes() {
     notesElm.style.display = "flex";
   });
   let notesElm = document.getElementById("notes");
-  if (notesObj.length != 0) {
+  if (wordhistory.length != 0) {
     notesElm.innerHTML = html;
   } else {
     notesElm.innerHTML = `<div class="nohistory mx-3">
@@ -48,15 +48,15 @@ function showNotes() {
 function deleteNote(index) {
   //   console.log("I am deleting", index);
 
-  let notes = localStorage.getItem("notes");
-  if (notes == null) {
-    notesObj = [];
+  let wordsearched = localStorage.getItem("wordsearched");
+  if (wordsearched == null) {
+    wordhistory = [];
   } else {
-    notesObj = JSON.parse(notes);
+    wordhistory = JSON.parse(wordsearched);
   }
 
-  notesObj.splice(index, 1);
-  localStorage.setItem("notes", JSON.stringify(notesObj));
+  wordhistory.splice(index, 1);
+  localStorage.setItem("wordsearched", JSON.stringify(wordhistory));
   showNotes();
 }
 
@@ -94,14 +94,14 @@ function viewongoogle() {
   window.open(url);
 }
 searchbtn.addEventListener("click", () => {
-  let notes = localStorage.getItem("notes");
-  if (notes == null) {
-    notesObj = [];
+  let wordsearched = localStorage.getItem("wordsearched");
+  if (wordsearched == null) {
+    wordhistory = [];
   } else {
-    notesObj = JSON.parse(notes);
+    wordhistory = JSON.parse(wordsearched);
   }
-  notesObj.push(searchTxt.value);
-  localStorage.setItem("notes", JSON.stringify(notesObj));
+  wordhistory.push(searchTxt.value);
+  localStorage.setItem("wordsearched", JSON.stringify(wordhistory));
   showNotes();
   // preloader.style.display = "block";
   viewongooglebtn.style.display = "block";
@@ -135,14 +135,14 @@ searchTxt.addEventListener("keyup", (e) => {
 
   //notfound.style.display = "none";
   if (e.keyCode === 13) {
-    let notes = localStorage.getItem("notes");
-  if (notes == null) {
-    notesObj = [];
+    let wordsearched = localStorage.getItem("wordsearched");
+  if (wordsearched == null) {
+    wordhistory = [];
   } else {
-    notesObj = JSON.parse(notes);
+    wordhistory = JSON.parse(wordsearched);
   }
-  notesObj.push(searchTxt.value);
-  localStorage.setItem("notes", JSON.stringify(notesObj));
+  wordhistory.push(searchTxt.value);
+  localStorage.setItem("wordsearched", JSON.stringify(wordhistory));
   showNotes();
     viewongooglebtn.style.display = "block";
     if (searchTxt.value != "") {
