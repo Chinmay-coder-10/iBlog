@@ -9,7 +9,8 @@ body {
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 p {
-  margin-top: 9px;
+  font-size:22px;
+margin-top:9px;
 }
 main {
   margin-top: 3rem;
